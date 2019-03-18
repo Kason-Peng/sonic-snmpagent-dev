@@ -1,0 +1,6 @@
+[submodule "sonic-snmpagent"]
+	path = sonic-snmpagent
+	url = https://github.com/Azure/sonic-snmpagent
+[submodule "sonic-py-swsssdk"]
+	path = sonic-py-swsssdk
+	url = https://github.com/Azure/sonic-py-swsssdk
