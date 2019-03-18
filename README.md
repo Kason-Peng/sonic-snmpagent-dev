@@ -1,6 +1,3 @@
-# download sonic-snmpagent
-git clone https://github.com/Azure/sonic-snmpagent    
-
 # setup environment
 sudo apt-get install python3-pip  
 sudo apt-get install python3-venv  
@@ -9,8 +6,13 @@ sudo apt-get install python3-venv
 pyvenv virenv  
 source virenv/bin/activate  
 
+# download sonic-snmpagent-dev
+git clone https://github.com/Kason-Peng/sonic-snmpagent-dev  
+cd sonic-snmpagent-dev  
+git submodule init  
+git submodule update  
+
 # install sonic dependency
-git clone https://github.com/Azure/sonic-py-swsssdk  
 cd sonic-py-swsssdk  
 python3.5 setup.py build  
 python3.5 setup.py install  
