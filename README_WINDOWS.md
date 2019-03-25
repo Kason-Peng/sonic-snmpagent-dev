@@ -1,12 +1,15 @@
 # setup environment
-sudo apt-get install python3-pip  
-sudo apt-get install python3-venv  
+install python3.7 from https://www.python.org/downloads/  
+pip install virtualenv  
 
 # start virtual environment
-pyvenv virenv  
-source virenv/bin/activate  
+cd D:\project  
+virtualenv venv  
+cd venv\Scripts  
+activate
 
 # download sonic-snmpagent-dev
+cd D:\project  
 git clone https://github.com/Kason-Peng/sonic-snmpagent-dev  
 cd sonic-snmpagent-dev  
 git submodule init  
@@ -14,11 +17,11 @@ git submodule update
 
 # install sonic dependency
 cd sonic-py-swsssdk  
-python3.5 setup.py build  
-python3.5 setup.py install  
+python setup.py build  
+python setup.py install  
 cd ../sonic-snmpagent  
-python3.5 setup.py build  
-python3.5 setup.py install  
+python setup.py build  
+python setup.py install  
 
 # install test dependency
-pip3 install mockredispy  
+pip install mockredispy  
